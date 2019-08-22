@@ -2,36 +2,41 @@ header
 {   box-sizing: border-box;
     background-image: url(../img/smoke__small.jpg);
     background-size: cover;
-    height: 45vh;
+    height: 60vh;
     text-align: center;
     margin-top: 0;
 }
 h1
 {
     margin: 0;
-    animation-name: Fade;
+    animation-name: slideInLeft;
     animation-duration: 4s;
     animation-iteration-count: unset;
     animation-direction: normal;
-    font-size: 8vh;
+    font-size: 9vh;
     position: relative;
     top:16vh;
-    text-shadow: 1px 1px 1px slategray;
+    text-shadow: 1px 1px 1px whitesmoke;
+    font-weight: bold;
 }
-@keyframes Fade {
+@keyframes slideInLeft {
     from {
-      opacity: 0;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
     }
   
     to {
-      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
     }
-}
+  }
+
 h2{
     font-size: 4vh;
     position: relative;
     top:20vh;
-    color:#a9d6cd;
+    color: black;
     text-shadow: 1px 1px 1px black;
     background-color: rgba(250, 230, 215, 0.4);
     width: 50vw;
@@ -39,10 +44,23 @@ h2{
 }
 img
 {
-    height: 20vh;
+    height: 18vh;
     width: auto;
     border-radius: 50%;
 }
+.pp{
+      border-radius: 0%;
+      margin: auto;
+      height: 40vh;
+      margin-bottom: 10px;
+      border: solid black 2px;
+      box-shadow: 5px 5px 3px gray;
+  }
+
+  .linkedin{
+      height: 9vh;
+      border-radius: 0%;
+  }
 section
 {   
     font-size: 20px;
@@ -50,15 +68,16 @@ section
     padding: 1;
     margin: auto;
 }
-ul{
-    list-style: none;
-}
+
 footer
 
 {
     background-color: black;
     color: white;
     text-align: center;
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
 }
 
 p
@@ -66,3 +85,74 @@ p
     margin-bottom: 0;
 }
 
+.navbar
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_list{
+    background-color: rgba(210,210, 210, 0.6);
+    animation-name: slideInLeft;
+    animation-duration: 4s;
+    animation-iteration-count: unset;
+    animation-direction: normal;
+}
+
+.exp_list{
+    background-color: rgba(210,210, 210, 0.6);
+    animation-name: slideInRight;
+    animation-duration: 4s;
+    animation-iteration-count: unset;
+    animation-direction: normal;
+
+}
+
+@keyframes slideInRight {
+    from {
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  h3{
+      font-size: 40px;
+      text-decoration: underline;
+  }
+
+  h4{
+      text-decoration: underline;
+  }
+
+  .nav-item{
+      margin-right: 100px;
+      margin-left: 80px;
+  }
+
+  a{
+      text-decoration: underline;
+      color: white;
+  }
+
+  .mail{
+      height: 10vh;
+  }
+
+  .a_propos{
+      line-height: 4vh;
+  }
+
+  li{
+      line-height: 4vh;
+  }
+
+  body{
+      scroll-behavior: smooth;
+  }
